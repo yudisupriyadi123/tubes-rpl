@@ -8,7 +8,7 @@ include('../header.php');
 <head>
     <title>Tambah Stok - Bagian Gudang - Toko Alfamart</title>
     <link href='../assets/css/main.css' rel='stylesheet' type='text/css' />
-    <link href='./assets/bootstrap/css/bootstrap.min.css' rel='stylesheet' type='text/css' />
+    <link href='../assets/bootstrap/css/bootstrap.min.css' rel='stylesheet' type='text/css' />
     
     <script src='../assets/bootstrap/js/jquery.js' type='text/javascript'></script>
     <script src='../assets/bootstrap/js/jquery-ui.js'></script>
@@ -102,7 +102,7 @@ include('../header.php');
     function searchSupplier(words) {
         $.ajax({
             method: 'POST',
-            url: 'ajax/search_supplier.php',
+            url: '../ajax/search_supplier.php',
             data: { keyword: words }
         }).done(function(res_html){
             $("#supplier").html(res_html);
@@ -117,7 +117,7 @@ include('../header.php');
     function getSupplier(kd_supplier) {
         $.ajax({
             method: 'POST',
-            url: 'ajax/search_supplier.php',
+            url: '../ajax/search_supplier.php',
             data: { keyword: kd_supplier }
         }).done(function(res_html){
             $("#supplier").html(res_html);
