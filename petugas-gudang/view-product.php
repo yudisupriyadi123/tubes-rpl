@@ -1,18 +1,18 @@
 <?php
 $tipe_akun = 'gudang';
-include('header.php');
+include('../header.php');
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Bagian Gudang - Toko Alfamart</title>
-	<link href='./assets/css/main.css' rel='stylesheet' type='text/css' />
-	<link href='./assets/bootstrap/css/bootstrap.min.css' rel='stylesheet' type='text/css' />
+	<link href='../assets/css/main.css' rel='stylesheet' type='text/css' />
+	<link href='../assets/bootstrap/css/bootstrap.min.css' rel='stylesheet' type='text/css' />
 	
-	<script src='./assets/bootstrap/js/jquery.js' type='text/javascript'></script>
-	<script src='./assets/bootstrap/js/jquery-ui.js'></script>
-	<script src='./assets/bootstrap/tab.js' type='text/javascript'></script>
-	<script src='./assets/bootstrap/dropdown.js' type='text/javascript'></script>
+	<script src='../assets/bootstrap/js/jquery.js' type='text/javascript'></script>
+	<script src='../assets/bootstrap/js/jquery-ui.js'></script>
+	<script src='../assets/bootstrap/tab.js' type='text/javascript'></script>
+	<script src='../assets/bootstrap/dropdown.js' type='text/javascript'></script>
 </head>
 <body>
 
@@ -21,7 +21,7 @@ include('header.php');
 		<h2 align='center'>Produk</h2>
 	</div>
 	
-	<?php include('include/navigation.php') ?>
+	<?php include('../include/navigation-gudang.php') ?>
 	
 	<div style='margin-bottom:20px'>
         <a href='entry-product.php' class='btn btn-primary'>
@@ -37,7 +37,7 @@ include('header.php');
 		<th>Tindakan</th>
 	</tr>
 	<?php
-	include('include/pagination.php');	
+	include('../include/pagination.php');	
 	createPagination("SELECT * FROM produk");
 	
 	if (mysqli_num_rows($query) < 1) {

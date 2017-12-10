@@ -1,18 +1,18 @@
 <?php
 $tipe_akun = 'gudang';
-include('header.php');
+include('../header.php');
 ?>
 <!DOCTYPE html>
 <html>
 <head>
     <title>Bagian Manager - Toko Alfamart</title>
-    <link href='./assets/css/main.css' rel='stylesheet' type='text/css' />
-    <link href='./assets/bootstrap/css/bootstrap.min.css' rel='stylesheet' type='text/css' />
+    <link href='../assets/css/main.css' rel='stylesheet' type='text/css' />
+    <link href='../assets/bootstrap/css/bootstrap.min.css' rel='stylesheet' type='text/css' />
     
-    <script src='./assets/bootstrap/js/jquery.js' type='text/javascript'></script>
-    <script src='./assets/bootstrap/js/jquery-ui.js'></script>
-    <script src='./assets/bootstrap/tab.js' type='text/javascript'></script>
-    <script src='./assets/bootstrap/dropdown.js' type='text/javascript'></script>
+    <script src='../assets/bootstrap/js/jquery.js' type='text/javascript'></script>
+    <script src='../assets/bootstrap/js/jquery-ui.js'></script>
+    <script src='../assets/bootstrap/tab.js' type='text/javascript'></script>
+    <script src='../assets/bootstrap/dropdown.js' type='text/javascript'></script>
 </head>
 <body>
 
@@ -21,7 +21,7 @@ include('header.php');
         <h2 align='center'>Riwayat Transaksi Pembelian</h2>
     </div>
     
-    <?php include('include/navigation.php') ?>
+    <?php include('../include/navigation-manager.php') ?>
     
     <table class='table table-striped table-hover table-condensed'>
     <tr>
@@ -30,7 +30,7 @@ include('header.php');
         <th>Jumlah Barang Belian</th>
     </tr>
     <?php
-    include('include/pagination.php');  
+    include('../include/pagination.php');  
     createPagination("
         SELECT
             jumlah_barangbelian(tp.kd_transaksi) AS jumlah_barang,

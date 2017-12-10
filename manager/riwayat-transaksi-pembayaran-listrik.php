@@ -1,18 +1,18 @@
 <?php
 $tipe_akun = 'gudang';
-include('header.php');
+include('../header.php');
 ?>
 <!DOCTYPE html>
 <html>
 <head>
     <title>Bagian Manager - Toko Alfamart</title>
-    <link href='./assets/css/main.css' rel='stylesheet' type='text/css' />
-    <link href='./assets/bootstrap/css/bootstrap.min.css' rel='stylesheet' type='text/css' />
+    <link href='../assets/css/main.css' rel='stylesheet' type='text/css' />
+    <link href='../assets/bootstrap/css/bootstrap.min.css' rel='stylesheet' type='text/css' />
     
-    <script src='./assets/bootstrap/js/jquery.js' type='text/javascript'></script>
-    <script src='./assets/bootstrap/js/jquery-ui.js'></script>
-    <script src='./assets/bootstrap/tab.js' type='text/javascript'></script>
-    <script src='./assets/bootstrap/dropdown.js' type='text/javascript'></script>
+    <script src='../assets/bootstrap/js/jquery.js' type='text/javascript'></script>
+    <script src='../assets/bootstrap/js/jquery-ui.js'></script>
+    <script src='../assets/bootstrap/tab.js' type='text/javascript'></script>
+    <script src='../assets/bootstrap/dropdown.js' type='text/javascript'></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js"></script>
 </head>
@@ -23,7 +23,7 @@ include('header.php');
         <h2 align='center'>Riwayat Transaksi Pembayaran Listrik</h2>
     </div>
     
-    <?php include('include/navigation.php') ?>
+    <?php include('../include/navigation-manager.php') ?>
 
     <div style='float:right'>
         <a id='save-as-pdf' onclick='demoFromHTML()' href='#/' class='btn btn-primary'>
@@ -32,7 +32,7 @@ include('header.php');
     </div>
     
     <?php
-    include('include/pagination.php');  
+    include('../include/pagination.php');  
     createPagination("
         SELECT
             t.tanggal,

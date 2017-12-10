@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 if (! isset($_SESSION['username']) )
 {
@@ -7,11 +6,11 @@ if (! isset($_SESSION['username']) )
 }
 else
 {
-    /* @var $tipe_akun didefinisikan di setiap page.
-     * Setiap page mengisi @var $tipe_akun untuk menandai page tersebut boleh diakses oleh siapa
-     */
-    if ($_SESSION['tipe_akun'] != $tipe_akun) {
-        header('location:access-forbidden.html');
+    // $dir is global variable first defined inside `config.php`
+    $user_dir = $dir[$_SESSION['tipe_akun']];
+    // checking if user is access only their area of application
+    if (strpos($_SERVER['REQUEST_URI'], "/$user_dir/") == false) {
+        header('location:../access-forbidden.html');
     }
 }
 

@@ -1,18 +1,11 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
-    $result = mysqli_query($conn, "
-        SELECT no_ktp
-        FROM petugas_kasir
-        WHERE akun_username = '$_SESSION[username]'
-    ");
-    $row = mysqli_fetch_assoc($result);
-
     $now = date('Y-m-d');
     $sql = "INSERT INTO transaksi VALUES (
                 '',
                 '$now',
-                '$row[no_ktp]',
+                '$_SESSION[no_ktp]',
                 '$_POST[id_member]'
     )";
     $query = mysqli_query($conn, $sql);

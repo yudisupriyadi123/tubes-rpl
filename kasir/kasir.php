@@ -1,18 +1,18 @@
 <?php
 // HATI-HATI: Tidak konsisten menamai antara kode_barang dan kode_produk, kd_barang, kd_produk sama saja
-include('header.php');
+include('../header.php');
 ?>
 <!DOCTYPE html>
 <html>
 <head>
     <title>Kasir - Toko Alfamart</title>
-    <link href='./assets/css/main.css' rel='stylesheet' type='text/css' />
-    <link href='./assets/bootstrap/css/bootstrap.min.css' rel='stylesheet' type='text/css' />
+    <link href='../assets/css/main.css' rel='stylesheet' type='text/css' />
+    <link href='../assets/bootstrap/css/bootstrap.min.css' rel='stylesheet' type='text/css' />
     
-    <script src='./assets/bootstrap/js/jquery.js' type='text/javascript'></script>
-    <script src='./assets/bootstrap/js/jquery-ui.js'></script>
-    <script src='./assets/bootstrap/tab.js' type='text/javascript'></script>
-    <script src='./assets/bootstrap/dropdown.js' type='text/javascript'></script>
+    <script src='../assets/bootstrap/js/jquery.js' type='text/javascript'></script>
+    <script src='../assets/bootstrap/js/jquery-ui.js'></script>
+    <script src='../assets/bootstrap/tab.js' type='text/javascript'></script>
+    <script src='../assets/bootstrap/dropdown.js' type='text/javascript'></script>
 
     <style>
     form {
@@ -55,7 +55,7 @@ include('header.php');
         <h2 align='center'>Kasir</h2>
     </div>
     
-    <?php include('include/navigation.php') ?>
+    <?php include('../include/navigation-kasir.php') ?>
     
     <form class='form-horizontal well' action='<?php $_SERVER['PHP_SELF'] ?>' method='POST'>
         <?php include('insert-kasir.php'); ?>
@@ -179,7 +179,7 @@ $(".products").on('keyup', 'input[name=barang]', function(e){
 
     $.ajax({
         method: 'POST',
-        url: 'ajax/search_product.php',
+        url: '../ajax/search_product.php',
         data: { keyword: thisElm.val() }
     }).done(function(res_html){
         thisElm.parent().find(".search-result").html(res_html);

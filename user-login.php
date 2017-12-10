@@ -3,7 +3,7 @@ session_start();
 include('config.php');
 include('connection.php');
 
-if (isset($_SESSION['username'])) header("location:${homepage}");
+if (isset($_SESSION['username'])) header("location:".$homepage[$_SESSION['tipe_akun']]);
 ?>
 
 <!DOCTYPE html>
