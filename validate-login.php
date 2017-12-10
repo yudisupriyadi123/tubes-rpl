@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     //$_SESSION['password'] = $_POST['password'];
     $_SESSION['tipe_akun'] = $tipe_akun;
     $_SESSION['no_ktp'] = $ktp;
-    header("location:". $homepage[$row['tipe_akun']]);
+    header("location:". $homepage[$tipe_akun]);
   }
 }
 
