@@ -6,5 +6,4 @@
         <li class='active'><a href='../logout.php'>Logout (<?php echo $_SESSION['username'] ?>)</a></li>
     </ul>
 </nav>
-    
-<hr />
+

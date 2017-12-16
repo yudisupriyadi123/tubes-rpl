@@ -1,34 +1,17 @@
 <?php
-$tipe_akun = 'gudang';
+$title = 'Riwayat Transaksi Pembelian';
+$jsfiles = array(
+    '../assets/js/jspdf.js',
+    './js/save-as-pdf.js');
 include('../header.php');
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Bagian Manager - Toko Alfamart</title>
-    <link href='../assets/css/main.css' rel='stylesheet' type='text/css' />
-    <link href='../assets/bootstrap/css/bootstrap.min.css' rel='stylesheet' type='text/css' />
-    
-    <script src='../assets/bootstrap/js/jquery.js' type='text/javascript'></script>
-    <script src='../assets/bootstrap/js/jquery-ui.js'></script>
-    <script src='../assets/bootstrap/tab.js' type='text/javascript'></script>
-    <script src='../assets/bootstrap/dropdown.js' type='text/javascript'></script>
-</head>
-<body>
 
-<div class='container'>
-    <div class='page-header'>
-        <h2 align='center'>Riwayat Transaksi Pembelian</h2>
+    <div style='float:right'>
+        <a id='save-as-pdf' onclick='demoFromHTML()' href='#/' class='btn btn-primary'>
+            <span class='glyphicon glyphicon-plus'></span> Simpan sebagai PDF
+        </a>
     </div>
-    
-    <?php include('../include/navigation-manager.php') ?>
-    
-    <table class='table table-striped table-hover table-condensed'>
-    <tr>
-        <th>Tanggal</th>
-        <th>ID Kasir</th>
-        <th>Jumlah Barang Belian</th>
-    </tr>
+
     <?php
     include('../include/pagination.php');  
     createPagination("
@@ -42,7 +25,16 @@ include('../header.php');
         WHERE
             t.kd_transaksi = tp.kd_transaksi
     ");
+    ?>
     
+    <div id="content">
+    <table class='table table-striped table-hover table-condensed'>
+    <tr>
+        <th>Tanggal</th>
+        <th>ID Kasir</th>
+        <th>Jumlah Barang Belian</th>
+    </tr>
+    <?php
     if (mysqli_num_rows($query) < 1) {
         echo "<tr><td colspan='5' align='center'>Tidak ada data untuk ditampilkan</td></tr>";
     }
@@ -59,6 +51,7 @@ include('../header.php');
     endwhile
     ?>
     </table>
+    </div>
 </div>
 
 </body>

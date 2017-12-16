@@ -2,7 +2,7 @@
 
 if (! isset($_SESSION['username']) )
 {
-    header('location:user-login.php');
+    header('location:../user-login.php');
 }
 else
 {

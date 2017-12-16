@@ -1,0 +1,31 @@
+form {
+    width: 600px;
+    margin: 0 auto;
+}
+
+#pesan {
+    font-size: 12px;
+    background-color: #f8fc58;
+    padding: 3px;
+    box-sizing: border-box;
+}
+
+.list-group {
+    position: absolute;
+    margin-top: -2px;
+    z-index: 99;
+    width: 265px;
+    box-shadow: 0px 2px 7px #dcdcdc;
+}
+
+
+#harga-total {
+    background: #f3fc66;
+    height: 34px;
+    font-size: 20px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 4px;
+    text-align: center;
+    color: red;
+}

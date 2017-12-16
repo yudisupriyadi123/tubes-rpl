@@ -1,61 +1,10 @@
 <?php
-// HATI-HATI: Tidak konsisten menamai antara kode_barang dan kode_produk, kd_barang, kd_produk sama saja
+/**
+ * HATI-HATI: Tidak konsisten menamai antara kode_barang dan kode_produk, kd_barang, kd_produk sama saja
+ */
+$title = 'KASIR';
 include('../header.php');
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Kasir - Toko Alfamart</title>
-    <link href='../assets/css/main.css' rel='stylesheet' type='text/css' />
-    <link href='../assets/bootstrap/css/bootstrap.min.css' rel='stylesheet' type='text/css' />
-    
-    <script src='../assets/bootstrap/js/jquery.js' type='text/javascript'></script>
-    <script src='../assets/bootstrap/js/jquery-ui.js'></script>
-    <script src='../assets/bootstrap/tab.js' type='text/javascript'></script>
-    <script src='../assets/bootstrap/dropdown.js' type='text/javascript'></script>
-
-    <style>
-    form {
-        width: 600px;
-        margin: 0 auto;
-    }
-
-    #pesan {
-        font-size: 12px;
-        background-color: #f8fc58;
-        padding: 3px;
-        box-sizing: border-box;
-    }
-
-    .list-group {
-        position: absolute;
-        margin-top: -2px;
-        z-index: 99;
-        width: 265px;
-        box-shadow: 0px 2px 7px #dcdcdc;
-    }
-    
-
-    #harga-total {
-        background: #f3fc66;
-        height: 34px;
-        font-size: 20px;
-        border-radius: 4px;
-        box-sizing: border-box;
-        padding: 4px;
-        text-align: center;
-        color: red;
-    }
-    </style>
-</head>
-<body>
-
-<div class='container'>
-    <div class='page-header'>
-        <h2 align='center'>Kasir</h2>
-    </div>
-    
-    <?php include('../include/navigation-kasir.php') ?>
     
     <form class='form-horizontal well' action='<?php $_SERVER['PHP_SELF'] ?>' method='POST'>
         <?php include('insert-kasir.php'); ?>

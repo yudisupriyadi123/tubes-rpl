@@ -1,33 +1,7 @@
 <?php
+$title = 'Pembayaran Listrik';
 include('../header.php');
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Pembayaran Listrik - Kasir - Toko Alfamart</title>
-    <link href='../assets/css/main.css' rel='stylesheet' type='text/css' />
-    <link href='../assets/bootstrap/css/bootstrap.min.css' rel='stylesheet' type='text/css' />
-    
-    <script src='../assets/bootstrap/js/jquery.js' type='text/javascript'></script>
-    <script src='../assets/bootstrap/js/jquery-ui.js'></script>
-    <script src='../assets/bootstrap/tab.js' type='text/javascript'></script>
-    <script src='../assets/bootstrap/dropdown.js' type='text/javascript'></script>
-
-    <style>
-    form {
-        width: 600px;
-        margin: 0 auto;
-    }
-    </style>
-</head>
-<body>
-
-<div class='container'>
-    <div class='page-header'>
-        <h2 align='center'>Pembayaran Listrik</h2>
-    </div>
-    
-    <?php include('../include/navigation-kasir.php') ?>
     
     <form class='form-horizontal well' action='<?php $_SERVER['PHP_SELF'] ?>' method='POST'>
         <?php include('insert-kasir-pembayaran-listrik.php'); ?>

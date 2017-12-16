@@ -1,29 +1,9 @@
 <?php
-$tipe_akun = 'gudang';
+$title = 'Produk';
 include('../header.php');
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Bagian Gudang - Toko Alfamart</title>
-	<link href='../assets/css/main.css' rel='stylesheet' type='text/css' />
-	<link href='../assets/bootstrap/css/bootstrap.min.css' rel='stylesheet' type='text/css' />
 	
-	<script src='../assets/bootstrap/js/jquery.js' type='text/javascript'></script>
-	<script src='../assets/bootstrap/js/jquery-ui.js'></script>
-	<script src='../assets/bootstrap/tab.js' type='text/javascript'></script>
-	<script src='../assets/bootstrap/dropdown.js' type='text/javascript'></script>
-</head>
-<body>
-
-<div class='container'>
-	<div class='page-header'>
-		<h2 align='center'>Produk</h2>
-	</div>
-	
-	<?php include('../include/navigation-gudang.php') ?>
-	
-	<div style='margin-bottom:20px'>
+	<div style='float:right;margin-bottom:20px'>
         <a href='entry-product.php' class='btn btn-primary'>
             <span class='glyphicon glyphicon-plus'></span> Tambah Produk
         </a>
