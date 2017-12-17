@@ -1,0 +1,79 @@
+
+.nav-primary {
+	text-align:center;
+}
+.nav.nav-pills {
+	display:inline-block;
+}
+
+.nav > li {
+  margin-right: 10px;
+}
+
+.nav > li > a {
+  color: #BF55EC;
+  text-shadow: 0 2px 8px #000;
+}
+
+.nav > li.active > a {
+  color: white;
+}
+
+.nav > li > a:hover {
+  color: white;
+  text-shadow: none;
+  background-image: linear-gradient(to right, #E040FB, #00BCD4);
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.3);
+}
+
+.page-header {
+  border-bottom: 0 solid #000;
+}
+
+.page-header h2 {
+  color: white;
+  text-shadow: 0 2px 8px #000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+nav {
+  margin-bottom: 40px;
+}
+
+form.well {
+  padding: 40px 20px;
+  border-color: white;
+  box-shadow: 0px 2px 8px #000;
+  width: 600px;
+  margin: 0 auto;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  background: #f2b950;
+  background: -moz-radial-gradient(0% 100%, ellipse cover, rgba(130,37,47,.4) 10%,rgba(138,114,76,0) 40%),-moz-linear-gradient(top, rgba(130,37,47,.25) 0%, rgba(242,153,75,.4) 100%), -moz-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+  background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -webkit-linear-gradient(top, rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -webkit-linear-gradient(-45deg, #670d10 0%,#092756 100%);
+  background: -o-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -o-linear-gradient(top, rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -o-linear-gradient(-45deg, #670d10 0%,#092756 100%);
+  background: -ms-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -ms-linear-gradient(top, rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -ms-linear-gradient(-45deg, #670d10 0%,#092756 100%);
+  background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), linear-gradient(to bottom, rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), linear-gradient(135deg, #670d10 0%,#092756 100%);
+}
+
+.table {
+  box-shadow: 0 2px 8px #000;
+  background-color: white;
+}
+
+.pagination {
+  box-shadow: 0 2px 2px 1px #000;
+}
+
+.pagination > li > a {
+  border-color: white;
+}
